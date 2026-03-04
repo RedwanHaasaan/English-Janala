@@ -61,7 +61,7 @@ const displayWords = (wordList) => {
                         </div>
                         <div class="flex justify-between items-center">
                             <!-- Info -->
-                            <button class="w-10 h-10 sm:w-12 sm:h-12 bg-sky-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-sky-200 transition">
+                            <button onclick="fetchWordDetails(${word.id})" class="w-10 h-10 sm:w-12 sm:h-12 bg-sky-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-sky-200 transition">
                                 <i class="fa-solid fa-circle-info text-slate-600 text-sm sm:text-base"></i>
                             </button>
                             <!-- Volume -->
@@ -99,5 +99,35 @@ const pronounceWord = (word, id) => {
   };
   window.speechSynthesis.speak(speech);
 };
+
+//show info word
+const fetchWordDetails = (wordId) => {
+  fetch(`https://openapi.programming-hero.com/api/word/${wordId}`)
+    .then((res) => res.json())
+    .then((json) => displayWordsDetails(json.data));
+};
+
+const displayWordsDetails = (data) => {
+    const wordName=document.getElementById("info_word");
+    const wordPronounce=document.getElementById("word_pornounce");
+    const wordMeaning=document.getElementById("word_meaning");
+    const wordPartsOfSpeech=document.getElementById("word_partsOfSpeech");
+    const wordSentence=document.getElementById("word_sentence");
+    const wordSynonymsContainer=document.getElementById("word_synonyms");
+    const AllSynonyms=data.synonyms;
+    wordName.innerText=data.word;
+    wordPronounce.innerHTML=`(<i class="fa-solid fa-microphone-lines"></i>:${data.pronunciation})`;
+    wordMeaning.innerText=data.meaning;
+    wordPartsOfSpeech.innerText=data.partsOfSpeech;
+    wordSentence.innerText=data.sentence;
+    wordSynonymsContainer.innerHTML="";
+    for(let synonym of AllSynonyms){
+        const element=document.createElement("span");
+        element.classList="px-4 py-2 bg-slate-100 rounded-lg";
+        element.innerHTML=`${synonym}`
+        wordSynonymsContainer.appendChild(element);
+    }
+    document.getElementById("word_info").showModal();
+}
 loadLessonBtns();
 showDefaultMessage();
