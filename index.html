@@ -18,26 +18,28 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="bg-nav shadow-sm px-4 sticky z-50 top-0">
+    <nav class="bg-sky-100 shadow-sm px-4 sticky z-50 top-0">
         <div class=" navbar">
             <div class="navbar-start">
-                <a class="btn btn-ghost text-xl flex flex-row">
+                <a class="btn btn-ghost hover:bg-transparent border-none text-xl flex items-center gap-1">
                     <span>English</span>
                     <img src="./assets/logo.png" alt="Logo" class="w-10 h-10">
                     <span class="font-hind">জানালা</span>
                 </a>
             </div>
             <div class="navbar-end gap-4 hidden lg:flex">
-                <button class="btn btn-outline btn-primary gap-1">
-                    <i class="fa-solid fa-circle-question" style="color: #422ad5;"></i>
+                <button class="btn btn-outline btn-primary gap-1 group">
+                    <i class="fa-solid fa-circle-question text-primary group-hover:text-white"></i>
                     <span>FAQ</span>
                 </button>
-                <button class="btn btn-outline btn-primary gap-1">
-                    <img src="./assets/fa-book-open.png" alt="">
+
+                <button class="btn btn-outline btn-primary gap-1 group">
+                    <i class="fa-solid fa-book-open text-primary group-hover:text-white"></i>
                     <span>Learn</span>
                 </button>
-                <button class="btn btn-outline btn-primary gap-1">
-                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #422ad5;"></i>
+
+                <button class="btn btn-outline btn-primary gap-1 group">
+                    <i class="fa-solid fa-right-from-bracket text-primary group-hover:text-white"></i>
                     <span>Logout</span>
                 </button>
             </div>
@@ -64,21 +66,19 @@
             </div>
         </div>
     </nav>
+    <!-- Hero section -->
     <header
         class="min-h-screen flex flex-col-reverse lg:flex-row items-center px-4 md:px-8 lg:px-16 gap-10 lg:gap-24 overflow-x-hidden">
         <!-- Left Content -->
         <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
-
             <h1 class="text-3xl md:text-4xl lg:text-5xl text-sky-500 font-bold">
                 English <span class="text-gray-800">is Easy!!</span>
             </h1>
-
             <p
                 class="font-hind font-medium text-lg md:text-xl lg:text-2xl text-gray-600 lg:w-full xl:w-3/4 mx-auto lg:mx-0 text-justify lg:text-left">
                 আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান,
                 আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
             </p>
-
             <div class="card w-full max-w-sm mx-auto lg:mx-0">
                 <fieldset class="space-y-3">
                     <input type="text" class="input input-bordered w-full" placeholder="Enter Your Name" />
@@ -86,13 +86,31 @@
                     <button class="btn btn-primary w-full mt-2">Get Started</button>
                 </fieldset>
             </div>
-
         </div>
         <!-- Image -->
         <div class="flex-1 flex justify-center">
             <img src="./assets/hero-student.png" alt="Hero Student" class="max-w-full h-auto">
         </div>
     </header>
+    <!-- main -->
+    <main class="mt-10">
+        <section class="flex flex-col gap-10">
+            <div class="text-center">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl text-sky-500 font-bold">
+                    Let's <span class="text-gray-800">Learn Vocabularies</span>
+                </h1>
+            </div>
+            <div id="lessonBtnContainer" class="flex flex-row justify-center flex-wrap gap-5">
+                <!-- Lesson Button Will Appear -->
+            </div>
+            <div id="wordsContainer"
+                class="bg-gray-100 w-11/12 mx-auto rounded-3xl p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <!-- Vocabs menu Will apeear through JS -->
+
+            </div>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
