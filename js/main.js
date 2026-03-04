@@ -28,7 +28,21 @@ const loadLevelWord = (level_id) => {
     .then((res) => res.json())
     .then((json) => displayWords(json.data));
 }
+const showDefaultMessage = () => {
+  wordsContainer.innerHTML = `
+    <div class="col-span-full flex flex-col justify-center items-center text-center max-w-md mx-auto gap-4">
+        <img src="./assets/alert-error.png" alt="Alert Error" class="w-24">
 
+        <p class="text-gray-500">
+            আপনি এখনো কোন Lesson Select করেন নি
+        </p>
+
+        <h1 class="text-2xl font-semibold">
+            একটি Lesson Select করুন।
+        </h1>
+    </div>
+  `;
+};
 const displayWords = (wordList) => {
     console.log()
     wordsContainer.innerHTML = "";
@@ -71,5 +85,5 @@ const displayWords = (wordList) => {
     }
 
 }
-
 loadLessonBtns();
+showDefaultMessage();
