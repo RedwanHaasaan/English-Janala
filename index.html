@@ -18,7 +18,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="bg-nav shadow-sm px-4">
+    <nav class="bg-nav shadow-sm px-4 sticky z-50 top-0">
         <div class=" navbar">
             <div class="navbar-start">
                 <a class="btn btn-ghost text-xl flex flex-row">
@@ -64,6 +64,35 @@
             </div>
         </div>
     </nav>
+    <header
+        class="min-h-screen flex flex-col-reverse lg:flex-row items-center px-4 md:px-8 lg:px-16 gap-10 lg:gap-24 overflow-x-hidden">
+        <!-- Left Content -->
+        <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
+
+            <h1 class="text-3xl md:text-4xl lg:text-5xl text-sky-500 font-bold">
+                English <span class="text-gray-800">is Easy!!</span>
+            </h1>
+
+            <p
+                class="font-hind font-medium text-lg md:text-xl lg:text-2xl text-gray-600 lg:w-full xl:w-3/4 mx-auto lg:mx-0 text-justify lg:text-left">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান,
+                আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+
+            <div class="card w-full max-w-sm mx-auto lg:mx-0">
+                <fieldset class="space-y-3">
+                    <input type="text" class="input input-bordered w-full" placeholder="Enter Your Name" />
+                    <input type="password" class="input input-bordered w-full" placeholder="Password" />
+                    <button class="btn btn-primary w-full mt-2">Get Started</button>
+                </fieldset>
+            </div>
+
+        </div>
+        <!-- Image -->
+        <div class="flex-1 flex justify-center">
+            <img src="./assets/hero-student.png" alt="Hero Student" class="max-w-full h-auto">
+        </div>
+    </header>
 </body>
 
 </html>
