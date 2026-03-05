@@ -88,6 +88,7 @@ const displayWords = (wordList) => {
 
 //Speaker Button Clicks
 const pronounceWord = (word, id) => {
+window.speechSynthesis.cancel();
   const speech = new SpeechSynthesisUtterance(word);
   speech.lang = "en-US";
   speech.rate = 0.7;
