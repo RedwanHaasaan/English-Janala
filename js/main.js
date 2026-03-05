@@ -1,12 +1,12 @@
 // constants
 const lessonBtnContainer = document.getElementById("lessonBtnContainer");
 const wordsContainer = document.getElementById("wordsContainer");
-
+const spinner = document.getElementById("spinner");
 //Load all Lessons Buttons
-const loadLessonBtns = () => {
-  fetch("https://openapi.programming-hero.com/api/levels/all")
-    .then((res) => res.json())
-    .then((json) => displayBtns(json.data));
+const loadLessonBtns = async () => {
+    const res = await fetch("https://openapi.programming-hero.com/api/levels/all");
+    const json = await res.json();
+    displayBtns(json.data)
 };
 
 //Display all Lessons Buttons
@@ -24,10 +24,11 @@ const displayBtns = (btnList) => {
   }
 };
 //Display all Lessons Buttons
-const loadLevelWord = (level_id) => {
-  fetch(`https://openapi.programming-hero.com/api/level/${level_id}`)
-    .then((res) => res.json())
-    .then((json) => displayWords(json.data));
+const loadLevelWord = async (level_id) => {
+  showSpinner();
+  const res = await fetch(`https://openapi.programming-hero.com/api/level/${level_id}`);
+  const json = await res.json();
+  displayWords(json.data);
 };
 //ShowDefault Message
 const showDefaultMessage = () => {
@@ -47,7 +48,6 @@ const showDefaultMessage = () => {
 };
 //displayWords
 const displayWords = (wordList) => {
-  console.log();
   wordsContainer.innerHTML = "";
   if (wordList.length > 0) {
     for (let word of wordList) {
@@ -102,10 +102,10 @@ window.speechSynthesis.cancel();
 };
 
 //show info word
-const fetchWordDetails = (wordId) => {
-  fetch(`https://openapi.programming-hero.com/api/word/${wordId}`)
-    .then((res) => res.json())
-    .then((json) => displayWordsDetails(json.data));
+const fetchWordDetails = async(wordId) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/word/${wordId}`);
+    const json = await res.json();
+    displayWordsDetails(json.data);
 };
 
 const displayWordsDetails = (data) => {
@@ -130,5 +130,16 @@ const displayWordsDetails = (data) => {
     }
     document.getElementById("word_info").showModal();
 }
+
+
+//spinner
+function showSpinner() {
+  wordsContainer.innerHTML = `
+    <div class="col-span-full flex justify-center items-center py-10">
+      <l-dot-spinner size="40" speed="0.9" color="black"></l-dot-spinner>
+    </div>
+  `;
+}
+
 loadLessonBtns();
 showDefaultMessage();
