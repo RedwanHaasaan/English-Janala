@@ -1,196 +1,216 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Tailwind + Daisy Ui -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Font Awosome ICOn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
-    <!-- Style Sheet -->
-    <link rel="stylesheet" href="./style/style.css" />
-    <title>English Janala || The Best Education Platform</title>
-  </head>
 
-  <body>
-    <!-- Navbar -->
-    <nav class="bg-sky-100 shadow-sm px-4 sticky z-50 top-0">
-      <div class="navbar">
-        <div class="navbar-start">
-          <a
-            class="btn btn-ghost hover:bg-transparent border-none text-xl flex items-center gap-1"
-          >
-            <span>English</span>
-            <img src="./assets/logo.png" alt="Logo" class="w-10 h-10" />
-            <span class="font-hind">জানালা</span>
-          </a>
-        </div>
-        <div class="navbar-end gap-4 hidden lg:flex">
-          <button class="btn btn-outline btn-primary gap-1 group">
-            <i
-              class="fa-solid fa-circle-question text-primary group-hover:text-white"
-            ></i>
-            <span>FAQ</span>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tailwind + Daisy Ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Font Awosome ICOn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="./style/style.css" />
+  <title>English Janala || The Best Education Platform</title>
+</head>
 
-          <button class="btn btn-outline btn-primary gap-1 group">
-            <i
-              class="fa-solid fa-book-open text-primary group-hover:text-white"
-            ></i>
-            <span>Learn</span>
-          </button>
-
-          <button class="btn btn-outline btn-primary gap-1 group">
-            <i
-              class="fa-solid fa-right-from-bracket text-primary group-hover:text-white"
-            ></i>
-            <span>Logout</span>
-          </button>
-        </div>
-        <!-- Mobile Hamburger -->
-        <div class="navbar-end lg:hidden">
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </label>
-
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li><a>FAQ</a></li>
-              <li><a>Learn</a></li>
-              <li><a>Logout</a></li>
-            </ul>
-          </div>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-sky-100 shadow-sm px-4 sticky z-50 top-0">
+    <div class="navbar">
+      <div class="navbar-start">
+        <a class="btn btn-ghost hover:bg-transparent border-none text-xl flex items-center gap-1">
+          <span>English</span>
+          <img src="./assets/logo.png" alt="Logo" class="w-10 h-10" />
+          <span class="font-hind">জানালা</span>
+        </a>
+      </div>
+      <div class="navbar-end gap-4 hidden lg:flex">
+        <a href="#FAQ" class="btn btn-outline btn-primary gap-1 group">
+          <i class="fa-solid fa-circle-question text-primary group-hover:text-white"></i>
+          FAQ
+        </a>
+        <a href="#learn" class="btn btn-outline btn-primary gap-1 group">
+          <i class="fa-solid fa-book-open text-primary group-hover:text-white"></i>
+          <span>Learn</span>
+        </a>
+        <a href="#logout" class="btn btn-outline btn-primary gap-1 group">
+          <i class="fa-solid fa-right-from-bracket text-primary group-hover:text-white"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+      <!-- Mobile Hamburger -->
+      <div class="navbar-end lg:hidden">
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a>Logout</a></li>
+          </ul>
         </div>
       </div>
-    </nav>
-    <!-- Hero section -->
-    <header
-      class="min-h-screen flex flex-col-reverse lg:flex-row items-center px-4 md:px-8 lg:px-16 gap-10 lg:gap-24 overflow-x-hidden"
-    >
-      <!-- Left Content -->
-      <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl text-sky-500 font-bold">
-          English <span class="text-gray-800">is Easy!!</span>
+    </div>
+  </nav>
+  <!-- Hero section -->
+  <header
+    class="min-h-screen flex flex-col-reverse lg:flex-row items-center px-4 md:px-8 lg:px-16 gap-10 lg:gap-24 overflow-x-hidden">
+    <!-- Left Content -->
+    <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl text-sky-500 font-bold">
+        English <span class="text-gray-800">is Easy!!</span>
+      </h1>
+      <p
+        class="font-hind font-medium text-lg md:text-xl lg:text-2xl text-gray-600 lg:w-full xl:w-3/4 mx-auto lg:mx-0 text-justify lg:text-left">
+        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+        আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+        অন্য একটি Level এ
+      </p>
+      <div class="card w-full max-w-sm mx-auto lg:mx-0">
+        <fieldset class="space-y-3">
+          <input type="text" class="input input-bordered w-full" placeholder="Enter Your Name" />
+          <input type="password" class="input input-bordered w-full" placeholder="Password" />
+          <button class="btn btn-primary w-full mt-2">Get Started</button>
+        </fieldset>
+      </div>
+    </div>
+    <!-- Image -->
+    <div class="flex-1 flex justify-center">
+      <img src="./assets/hero-student.png" alt="Hero Student" class="max-w-full h-auto" />
+    </div>
+  </header>
+  <!-- main -->
+  <main class="mt-10">
+    <!-- Word Secton -->
+    <section id="learn" class="flex flex-col gap-10">
+      <div class="text-center">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl text-sky-500 font-bold">
+          Let's <span class="text-gray-800">Learn Vocabularies</span>
         </h1>
-        <p
-          class="font-hind font-medium text-lg md:text-xl lg:text-2xl text-gray-600 lg:w-full xl:w-3/4 mx-auto lg:mx-0 text-justify lg:text-left"
-        >
-          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
-          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
-          অন্য একটি Level এ
-        </p>
-        <div class="card w-full max-w-sm mx-auto lg:mx-0">
-          <fieldset class="space-y-3">
-            <input
-              type="text"
-              class="input input-bordered w-full"
-              placeholder="Enter Your Name"
-            />
-            <input
-              type="password"
-              class="input input-bordered w-full"
-              placeholder="Password"
-            />
-            <button class="btn btn-primary w-full mt-2">Get Started</button>
-          </fieldset>
-        </div>
       </div>
-      <!-- Image -->
-      <div class="flex-1 flex justify-center">
-        <img
-          src="./assets/hero-student.png"
-          alt="Hero Student"
-          class="max-w-full h-auto"
-        />
+      <div id="lessonBtnContainer" class="flex flex-row justify-center flex-wrap gap-5">
+        <!-- Lesson Button Will Appear -->
       </div>
-    </header>
-    <!-- main -->
-    <main class="mt-10">
-      <section class="flex flex-col gap-10">
-        <div class="text-center">
-          <h1 class="text-2xl md:text-3xl lg:text-4xl text-sky-500 font-bold">
-            Let's <span class="text-gray-800">Learn Vocabularies</span>
-          </h1>
-        </div>
-        <div
-          id="lessonBtnContainer"
-          class="flex flex-row justify-center flex-wrap gap-5"
-        >
-          <!-- Lesson Button Will Appear -->
-        </div>
-        <div
-          id="wordsContainer"
-          class="bg-gray-100 w-11/12 mx-auto rounded-3xl p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
-        >
-          <!-- Vocabs menu Will apeear through JS -->
-        </div>
-        <dialog id="word_info" class="modal modal-bottom sm:modal-middle">
-          <div class="modal-box max-w-2xl">
-            <!-- Card Container -->
-            <div class="border border-sky-100 rounded-xl p-6 space-y-6">
-              <!-- Word Title -->
-              <h2 class="text-3xl font-bold">
-                <span id="info_word"></span>
-                <span id="word_pornounce" class="font-hind text-gray-600"></span>
-              </h2>
-              <!-- Meaning -->
-              <div>
-                <h4 class="font-semibold text-lg mb-1">Meaning</h4>
-                <p id="word_meaning" class="font-hind text-gray-700 text-lg"></p>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg mb-1">Parts Of Speech</h4>
-                <p id="word_partsOfSpeech" class="font-hind text-gray-700 text-lg"></p>
-              </div>
-              <!-- Example -->
-              <div>
-                <h4 class="font-semibold text-lg mb-1">Example</h4>
-                <p class="text-gray-700" id="word_sentence"></p>
-              </div>
-              <!-- Synonyms -->
-              <div>
-                <h4 class="font-semibold text-lg mb-3 font-hind">
-                  সমার্থক শব্দ গুলো
-                </h4>
-                <div id="word_synonyms" class="flex gap-3 flex-wrap"> </div>
-              </div>
+      <div id="wordsContainer"
+        class="bg-gray-100 w-11/12 mx-auto rounded-3xl p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Vocabs menu Will apeear through JS -->
+      </div>
+      <dialog id="word_info" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box max-w-2xl">
+          <!-- Card Container -->
+          <div class="border border-sky-100 rounded-xl p-6 space-y-6">
+            <!-- Word Title -->
+            <h2 class="text-3xl font-bold">
+              <span id="info_word"></span>
+              <span id="word_pornounce" class="font-hind text-gray-600"></span>
+            </h2>
+            <!-- Meaning -->
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Meaning</h4>
+              <p id="word_meaning" class="font-hind text-gray-700 text-lg"></p>
             </div>
-            <!-- Bottom Button -->
-            <div class="mt-6">
-              <form method="dialog">
-                <button class="btn btn-primary px-6">Complete Learning</button>
-              </form>
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Parts Of Speech</h4>
+              <p id="word_partsOfSpeech" class="font-hind text-gray-700 text-lg"></p>
+            </div>
+            <!-- Example -->
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Example</h4>
+              <p class="text-gray-700" id="word_sentence"></p>
+            </div>
+            <!-- Synonyms -->
+            <div>
+              <h4 class="font-semibold text-lg mb-3 font-hind">
+                সমার্থক শব্দ গুলো
+              </h4>
+              <div id="word_synonyms" class="flex gap-3 flex-wrap"> </div>
             </div>
           </div>
-        </dialog>
-      </section>
-    </main>
-    <script src="./js/main.js"></script>
-  </body>
+          <!-- Bottom Button -->
+          <div class="mt-6">
+            <form method="dialog">
+              <button class="btn btn-primary px-6">Complete Learning</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </section>
+    <!-- FAQ Section -->
+    <section id="FAQ" class="px-5 lg:px-10 xl:px-20  my-10 flex flex-col gap-10 lg:gap-20">
+      <div>
+        <h1 class="text-xl lg:text-4xl font-bold text-sky-500 text-center">Frequently <span class="text-gray-800">Asked Questions</span></h1>
+      </div>
+      <div class="space-y-5">
+        <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title text-base font-medium">
+            1. How can I start learning English on this website?
+          </div>
+          <div class="collapse-content text-base text-gray-400 font-normal">
+            You can begin by exploring our beginner-friendly lessons and vocabulary
+            sections. Each lesson includes pronunciation, meaning, and examples to
+            help you understand and practice English step by step.
+          </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-base font-medium">
+            2. Is this website free to use?
+          </div>
+          <div class="collapse-content text-base text-gray-400 font-normal">
+            Yes, the core features of this website are completely free. You can learn
+            vocabulary, practice pronunciation, and explore lessons without paying
+            any fee.
+          </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-base font-medium">
+            3. Do I need to create an account?
+          </div>
+          <div class="collapse-content text-base text-gray-400 font-normal">
+            No, you can explore many lessons without creating an account. However,
+            creating an account allows you to save your progress, track learning, and
+            access personalized features.
+          </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-base font-medium">
+            4. How can I build my English vocabulary?
+          </div>
+          <div class="collapse-content text-base text-gray-400 font-normal">
+            You can build vocabulary by practicing daily lessons, listening to word
+            pronunciations, and reviewing example sentences. Regular practice will
+            help you remember words faster and improve your speaking skills.
+          </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-base font-medium">
+            5. Do you offer certificates for completed courses?
+          </div>
+          <div class="collapse-content text-base text-gray-400 font-normal">
+            Currently, we focus on providing practical learning tools and vocabulary
+            practice. Certificates may be introduced in future updates as we expand
+            our course offerings.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

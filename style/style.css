@@ -3,13 +3,16 @@
 @import "tailwindcss";
 
 @layer base {
-    body{
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
         font-family: "Poppins", sans-serif;
     }
 }
 
-@layer utilities{
-    .font-hind{
+@layer utilities {
+    .font-hind {
         font-family: "Hind Siliguri", sans-serif;
     }
 }
