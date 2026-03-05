@@ -53,11 +53,11 @@ const displayWords = (wordList) => {
     for (let word of wordList) {
       const wordDiv = document.createElement("div");
       wordDiv.innerHTML = `
-                    <div class="bg-white rounded-xl text-center flex flex-col gap-6 sm:gap-8 p-6 sm:p-10 lg:p-14 w-full max-w-md mx-auto">
+                    <div class="bg-white rounded-xl text-center flex flex-col justify-between gap-6 sm:gap-8 p-6 sm:p-10 lg:p-14 w-full max-w-md mx-auto min-h-80">
                         <div class="flex flex-col gap-4 sm:gap-6">
                             <h2 class="text-2xl sm:text-3xl font-bold text-gray-950">${word.word}</h2>
                             <h4 class="text-lg sm:text-xl font-medium text-gray-900"> Meaning / Pronunciation </h4>
-                            <p class="font-hind text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-500"> "${word.meaning} / ${word.pronunciation}" </p>
+                            <p class="font-hind text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-500 line-clamp-2"> "${word.meaning} / ${word.pronunciation}" </p>
                         </div>
                         <div class="flex justify-between items-center">
                             <!-- Info -->

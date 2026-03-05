@@ -60,7 +60,7 @@
     </div>
   </nav>
   <!-- Hero section -->
-  <header
+  <header id="home"
     class="min-h-screen flex flex-col-reverse lg:flex-row items-center px-4 md:px-8 lg:px-16 gap-10 lg:gap-24 overflow-x-hidden">
     <!-- Left Content -->
     <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
@@ -145,7 +145,8 @@
     <!-- FAQ Section -->
     <section id="FAQ" class="px-5 lg:px-10 xl:px-20  my-10 flex flex-col gap-10 lg:gap-20">
       <div>
-        <h1 class="text-xl lg:text-4xl font-bold text-sky-500 text-center">Frequently <span class="text-gray-800">Asked Questions</span></h1>
+        <h1 class="text-xl lg:text-4xl font-bold text-sky-500 text-center">Frequently <span class="text-gray-800">Asked
+            Questions</span></h1>
       </div>
       <div class="space-y-5">
         <div class="collapse collapse-plus bg-gray-100 border border-base-300">
@@ -210,6 +211,55 @@
       </div>
     </section>
   </main>
+  <!-- Footer -->
+  <footer
+  class="footer flex flex-col lg:flex-row bg-sky-100 text-black py-12 px-6 lg:px-20 gap-10 lg:gap-0 items-center lg:items-start justify-center lg:justify-between text-center lg:text-left">
+
+  <!-- Logo + Description -->
+  <aside class="flex flex-col gap-3 items-center lg:items-start">
+    <a href="#home" class="flex items-center gap-2 text-xl font-semibold">
+      <span>English</span>
+      <img src="./assets/logo.png" alt="Logo" class="w-10 h-10" />
+      <span class="font-hind">জানালা</span>
+    </a>
+
+    <p class="font-medium text-lg">
+      ইংরেজি শিখুন সহজে
+    </p>
+
+    <p class="text-sm opacity-80">
+      Providing ED-Tech Applications since 2025
+    </p>
+  </aside>
+
+  <!-- Social Links -->
+  <nav class="flex flex-col gap-3 items-center lg:items-start">
+    <h6 class="footer-title text-lg">Follow Us</h6>
+
+    <div class="flex gap-4 text-xl justify-center">
+      <a
+        class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+
+      <a
+        class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-red-600 hover:text-white transition duration-300 cursor-pointer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a
+        class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-pink-500 hover:text-white transition duration-300 cursor-pointer">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-800 hover:text-white transition duration-300 cursor-pointer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </nav>
+
+</footer>
   <script src="./js/main.js"></script>
 </body>
 
