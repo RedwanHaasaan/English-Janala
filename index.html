@@ -43,7 +43,7 @@
           <i class="fa-solid fa-book-open text-primary group-hover:text-white"></i>
           <span>Learn</span>
         </a>
-        <a class="btn btn-outline btn-primary gap-1 group">
+        <a href="#aiAssistant" class="btn btn-outline btn-primary gap-1 group">
           <i class="fa-solid fa-robot text-primary group-hover:text-white"></i>
           <span>Ask AI</span>
         </a>
@@ -64,6 +64,7 @@
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#learn">Learn</a></li>
+            <li><a href="#aiAssistant">Ask AI</a></li>
             <li><a>Logout</a></li>
           </ul>
         </div>
@@ -154,154 +155,112 @@
       </dialog>
     </section>
     <!-- Chat With AI -->
-    <section class="w-11/12 mx-auto my-16 lg:my-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="aiAssistant" class="w-11/12 mx-auto my-16 lg:my-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <!-- LEFT BANNER -->
       <div class="flex flex-col gap-6 text-center lg:text-left">
-
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
           Practice English with
           <span class="text-sky-500">AI Assistant</span>
         </h2>
-
         <p class="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
           Ask vocabulary meanings, pronunciation help, or example sentences.
           Our AI assistant will guide you step-by-step in your English learning journey.
         </p>
-
         <div class="bg-sky-50 border border-sky-100 p-5 sm:p-6 rounded-xl shadow-sm max-w-lg mx-auto lg:mx-0">
-
           <h4 class="font-semibold text-gray-800 mb-3">
             Try asking:
           </h4>
-
           <ul class="text-gray-600 space-y-2 text-sm sm:text-base">
             <li>• What does "improve" mean?</li>
             <li>• Give me a sentence with "opportunity"</li>
             <li>• How do I pronounce "entrepreneur"?</li>
           </ul>
-
         </div>
-
       </div>
-
-
       <!-- CHAT CARD -->
       <div class="card bg-base-100 border border-gray-200 shadow-xl w-full max-w-xl mx-auto">
-
         <!-- HEADER -->
         <div class="flex items-center gap-3 p-4 border-b">
-
           <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-500 text-lg">
             <i class="fa-solid fa-robot"></i>
           </div>
-
           <div>
-
             <h3 class="font-semibold text-sm sm:text-base">
               AI Assistant
             </h3>
-
             <div class="flex items-center gap-2 text-xs sm:text-sm">
-
               <div class="inline-grid *:[grid-area:1/1]">
                 <div class="status status-success animate-ping"></div>
                 <div class="status status-success"></div>
               </div>
-
               <span class="text-green-500 font-medium">
                 Online
               </span>
-
             </div>
-
           </div>
-
         </div>
-
 
         <!-- CHAT BODY -->
         <div class="p-4 h-72 sm:h-80 md:h-96 overflow-y-auto space-y-4">
-
           <!-- AI MESSAGE -->
           <div class="chat chat-start">
-
             <div class="chat-image avatar">
               <div class="w-8 sm:w-10 rounded-full bg-sky-100 flex items-center justify-center">
                 <i class="fa-solid fa-robot text-sky-500"></i>
               </div>
             </div>
-
             <div class="chat-header text-xs sm:text-sm">
               AI Assistant
               <time class="opacity-50 ml-1">12:40</time>
             </div>
-
             <div class="chat-bubble bg-sky-100 text-gray-700 text-sm sm:text-base">
               Hello 👋 I'm your AI tutor. Ask me anything about English vocabulary.
             </div>
-
           </div>
-
 
           <!-- USER MESSAGE -->
           <div class="chat chat-end">
-
             <div class="chat-image avatar">
               <div class="w-8 sm:w-10 rounded-full bg-gray-200 flex items-center justify-center">
                 <i class="fa-solid fa-user text-gray-600"></i>
               </div>
             </div>
-
             <div class="chat-header text-xs sm:text-sm">
               You
               <time class="opacity-50 ml-1">12:41</time>
             </div>
-
             <div class="chat-bubble chat-bubble-primary text-sm sm:text-base">
               What does "improve" mean?
             </div>
-
           </div>
-
 
           <!-- AI REPLY -->
           <div class="chat chat-start">
-
             <div class="chat-image avatar">
               <div class="w-8 sm:w-10 rounded-full bg-sky-100 flex items-center justify-center">
                 <i class="fa-solid fa-robot text-sky-500"></i>
               </div>
             </div>
-
             <div class="chat-header text-xs sm:text-sm">
               AI Assistant
               <time class="opacity-50 ml-1">12:41</time>
             </div>
-
             <div class="chat-bubble bg-sky-100 text-gray-700 text-sm sm:text-base">
               "Improve" means to make something better or increase its quality.
               Example: "Practice every day to improve your English."
             </div>
-
           </div>
-
         </div>
-
 
         <!-- CHAT FOOTER -->
         <div class="border-t p-3 sm:p-4 flex gap-2">
-
           <input type="text" placeholder="Ask the AI assistant..."
             class="input input-bordered w-full text-sm sm:text-base" />
-
           <button class="btn btn-primary px-4">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
-
         </div>
-
       </div>
-
     </section>
     <!-- FAQ Section -->
     <section id="FAQ" class="px-5 lg:px-10 xl:px-20  my-10 flex flex-col gap-10 lg:gap-20">
