@@ -1,6 +1,3 @@
-// API KEY
-const OPENROUTER_API_KEY = "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";
-
 // STORAGE KEY
 const STORAGE_KEY = "english_janala_chat_history";
 
@@ -370,14 +367,11 @@ async function askAI() {
   try {
 
     const response = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
+      "https://english-janala-ai.redwanhasan-dev.workers.dev/",
       {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": window.location.origin,
-          "X-Title": "English Janala AI Tutor"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           model: "google/gemma-2-9b-it",
@@ -388,6 +382,10 @@ async function askAI() {
         })
       }
     );
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(text);
+    }
 
     const data = await response.json();
 
@@ -403,7 +401,7 @@ async function askAI() {
       data.choices?.[0]?.message?.content ||
       "Sorry, I couldn't understand.";
 
-    // SAVE AI MESSAGE
+    // Save AI message to conversation memory
     conversationHistory.push({
       role: "assistant",
       content: reply
@@ -411,7 +409,7 @@ async function askAI() {
 
     saveConversation();
 
-    // LIMIT HISTORY
+    // Limit history size
     if (conversationHistory.length > 20) {
       conversationHistory.splice(1, 2);
     }
