@@ -1,5 +1,5 @@
 // API KEY
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 
 // STORAGE KEY
 const STORAGE_KEY = "english_janala_chat_history";
