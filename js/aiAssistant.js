@@ -376,7 +376,7 @@ async function askAI() {
         headers: {
           "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": window.location.origin,
+          "HTTP-Referer": "https://username.github.io",
           "X-Title": "English Janala AI Tutor"
         },
         body: JSON.stringify({
