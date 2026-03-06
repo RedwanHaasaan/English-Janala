@@ -1,5 +1,5 @@
 // API KEY
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 
 // STORAGE KEY
 const STORAGE_KEY = "english_janala_chat_history";
@@ -376,7 +376,7 @@ async function askAI() {
         headers: {
           "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "https://username.github.io",
+          "HTTP-Referer": window.location.origin,
           "X-Title": "English Janala AI Tutor"
         },
         body: JSON.stringify({
